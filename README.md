@@ -1,10 +1,10 @@
 ### Elements of the Coworking Space Service 
 
-The Cowokring Space Service utilizes AWS Codebuild, Elastic Kubernetes Service, Cloudwatch, and Elastic Container Service. The basic steps are to build a docker image, store the docker image, deploy the docker image and monitor the activity of the deployment.
+The Cowokring Space Service utilizes AWS Codebuild, Elastic Kubernetes Service, Cloudwatch, and Elastic Container Registry. The basic steps are to build a docker image, store the docker image, deploy the docker image and monitor the activity of the deployment.
 
 The following items are used to deploy the service.
-1. app.py is the python code for the coworking analytics application that will be run in a pod in the kubernetes cluster
-2. buildspec.yaml is used by AWS Codebuild for the build steps to build/create the docker image that will be stored in the Elastic Container Service. The source of the buildspec.yaml file is my github repo, which is linked to my AWS Codebuild project.
+1. app2.py is the python code for the coworking analytics application that will be run in a pod in the kubernetes cluster
+2. buildspec.yaml is used by AWS Codebuild for the build steps to build/create the docker image that will be stored in the Elastic Container Registry. The source of the buildspec.yaml file is my github repo, which is linked to my AWS Codebuild project.
 3. config.py file is referenced by the app.py file to get the environment variables.
 4. requirements_new.txt is used by dockerfile to install the appropriate dependencies in the docker image.
 5. dockerfile is the file used by AWS Codebuild to build the docker image, which the source is my github repo
